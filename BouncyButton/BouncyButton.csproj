@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<!-- Debug builds get a console window -->
+		<OutputType Condition="'$(Configuration)'=='Debug'">Exe</OutputType>
+		<!-- Release builds are pure Win32 GUI (no console) -->
+		<OutputType Condition="'$(Configuration)'=='Release'">WinExe</OutputType>
+
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.5" />
+	</ItemGroup>
+
+</Project>
